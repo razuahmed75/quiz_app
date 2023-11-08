@@ -2,12 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:quize_app/view/questions_page.dart';
 import 'utils/hive/init_hive.dart';
 import 'view/menu_page.dart';
 
 Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
   await initHive();
   runApp(MyApp());
 }
@@ -15,7 +13,6 @@ Future<void> main() async {
 class MyApp extends StatelessWidget {
    MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     SystemChrome.setPreferredOrientations([
@@ -23,7 +20,7 @@ class MyApp extends StatelessWidget {
       DeviceOrientation.portraitDown, 
     ]);
     return ScreenUtilInit(
-      designSize: const Size(360, 800),
+      designSize: Size(360, 800),
       minTextAdapt: true,
       splitScreenMode: true,
       useInheritedMediaQuery: true,

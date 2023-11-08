@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:quize_app/config/spacing.dart';
+import 'package:quiz_app/config/spacing.dart';
 
 class QuestionCard extends StatelessWidget {
   final String text;

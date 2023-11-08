@@ -2,9 +2,9 @@ import 'dart:convert';
 
 import 'package:flutter/animation.dart';
 import 'package:get/get.dart';
-import 'package:quize_app/helpers/api_client.dart';
-import 'package:quize_app/utils/hive/hive_helper.dart';
-import 'package:quize_app/view/menu_page.dart';
+import 'package:quiz_app/helpers/api_client.dart';
+import 'package:quiz_app/utils/hive/hive_helper.dart';
+import 'package:quiz_app/view/menu_page.dart';
 
 import '../model/quiz_model.dart';
 import '../utils/constants.dart';
@@ -27,6 +27,7 @@ class QuestionsController extends GetxController
     _animationController.dispose();
     super.onClose();
   }
+
   @override
   void dispose() {
     _animationController.dispose();
@@ -120,6 +121,8 @@ class QuestionsController extends GetxController
       checkingIndex = 0;
       // RESET TAPPED VALUE AFTER CHANGING QUIZ INDEX
       resetTappedValue();
+      // NEXT QUESTION WILL BE DISPLAYED AFTER 2 SECS LATER
+      // await Future.delayed(Duration(seconds: 2));
       Get.offAll(() => MenuPage());
     }
     update();

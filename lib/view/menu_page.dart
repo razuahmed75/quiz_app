@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:quize_app/config/spacing.dart';
-import 'package:quize_app/utils/hive/hive_helper.dart';
+import 'package:quiz_app/config/spacing.dart';
+import 'package:quiz_app/utils/hive/hive_helper.dart';
 import '../utils/colors.dart';
 import '../utils/hive/keys.dart';
 import '../utils/styles.dart';
@@ -41,7 +41,8 @@ class MenuPage extends StatelessWidget {
                 children: [
                   Text("High Score:", style: Styles.largeText),
                   HSpace(10.w),
-                  Text("${HiveHelp.read(Keys.highScore) ?? 0}", style: Styles.largeText),
+                  Text("${HiveHelp.read(Keys.highScore) ?? 0}",
+                      style: Styles.largeText),
                 ],
               ),
               VSpace(30.h),
